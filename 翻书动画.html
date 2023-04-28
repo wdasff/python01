@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-image: radial-gradient(white,black);
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shu{
+            position: relative;
+            width: 450px;
+            height: 600px;
+            /* background-color: rgba(255, 255, 255, 0.774); */
+            /* transform-style:  preserve-3d; */
+            /* box-shadow:   300px 0px 30px  rgb(0, 0, 0,.6) inset; */
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+        }
+         .shu::after{
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 454px;
+            left: 0px;
+            bottom: -3px;
+            background-color: rgb(100, 96, 96); 
+           background-image: linear-gradient(to right,rgb(71, 68, 68),rgba(124, 120, 120, 0.3) );
+             border-bottom-left-radius: 5px;
+        }
+         .shu::before{
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            right: -3px;
+            top: 0px;
+            background-color: rgb(112, 108, 108); 
+            background-image: linear-gradient(to top,rgb(114, 111, 111),rgba(90, 87, 87, 0.5) );;
+            border-top-right-radius: 3px;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+        }
+
+        .shu:hover{
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* transform: rotate(-5deg); */
+
+        }
+        .feng{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-image: url('../背景图片.jpg');
+            background-size: 100% ;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            transform: rotateY(0);
+            /* backface-visibility: hidden; */
+           
+        }
+        /* .shu:hover .feng{
+            transform: rotateY(-180deg);
+            
+        } */
+       
+     
+        .wen1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -1;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -2;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen3{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -3;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen4{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -4;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen5{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -5;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen6{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -6;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen7{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -7;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen8{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -8;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen9{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -9;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen10{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -10;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen11{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -11;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen12{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -12;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen13{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -13;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen14{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -14;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen15{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -15;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen16{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -16;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen17{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -17;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen18{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -18;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen19{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -19;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen20{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -20;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen21{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -21;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen22{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -22;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen23{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -23;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen24{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -24;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen25{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -25;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen26{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -26;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen27{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -27;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .wen28{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+            transform-origin: left;
+            transition: 1s cubic-bezier(.79,.34,.47,.92);
+            z-index: -28;
+            background-color: white;
+            transform: rotateY(0);
+            color: black;
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            /* backface-visibility: hidden; */
+        }
+        .shang{
+            position: absolute;
+            width: 450px;
+            height: 600px;
+            left: 90px;
+            z-index: 2;
+        }
+        .xia{
+            position: absolute;
+            width: 450px;
+            height: 600px;
+            left: 545px;
+            z-index: 2;
+        }
+        .pagenum{
+            position: absolute;
+            bottom: 10px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="shu">
+       <div class="feng"></div>     
+       <div class="wen1">
+           <h3 style="padding-top: 50px;padding-left: 40px;">目录</h3>
+           <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            前言     ---前言-----------------------   2<br>
+            第一章   ---python的环境适配------------   3<br>
+            第二章   ---书写第一个python文件--------    5<br>
+            第三章   ---python的基础知识------------    6<br>
+            第四章   ---python的书写标准------------    9<br>
+            第五章   ---输入和输出------------------    10<br>
+            第六章   ---转义字符和运算符------------     12<br>
+            第七章   ---复杂数据类型和操作----------     13<br>
+            第八章   ---程序的流程控制--------------     17<br>
+            第九章   ---常用的函数和创建函数---------     21<br>
+            第十章   ---对文件的操作---------------      24<br>
+            第十一章 ---类的创建------------------       25<br>
+            第十二章 ---库的了解------------------       27<br>
+           </p>
+           <p class="pagenum">1</p>
+        </div>
+    <!--第3页了-->
+    <div class="wen2">
+        <h3 style="padding-top: 50px;padding-left: 40px;">写在前面</h3>
+        <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+        提到python，我们会想到什么，黑客？爬虫？不，我们可能对python一无所知，在近几年的世界语言流行排行榜上，python超越c成为第一名，python的影响力遍布世界。那我们学习python有什么用吗？
+        我们可以百度一下百度公司的职业要求，看到我们是需要学习python的，就是说学好python进大厂不是梦。本文章是以入门的方式来讲解python的语法，没有涉及实战。python或者任何语言的学习方法都很简单，就是不断的写代码，写项目，在写的同时发现问题，同时进步，所以，我对学习python的简单建议是：每章学习后记录所学的，自己写一些例子来理解，尝试写一些感兴趣的。
+        重要的事情说三遍，看完这篇文章，不意味着学会了，要多练习，多记录，多敲代码。
+        </p>
+        <p class="pagenum">2</p>
+    </div>
+    <!--第3页了-->
+    <div class="wen3">
+            <h3 style="padding-top: 50px;padding-left: 40px;">第一章：python的环境适配</h3>
+           <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            <img src="../教学/python下载.png" style="height: 70px;width: 100px;float: left;">
+            python的运行需要有python的开发环境和python运行环境，其中运行环境的只能通过到python的官方网站来下载：'https://www.python.org/'
+            ，下载安装后(注：安装过程中记得勾选左下角pip的那个按钮),在电脑里会出现1个python的文件夹，里面有IDLE还有其他的文件，其中的这个IDLE
+            是python的其中一个开发环境，这里的开发环境是指书写python的地方，运行文件是只有有这个才能够运行python文件。
+            <h4 style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">相较于使用IDLE开放，我更倾向于使用pycharm或vscode进行开发,
+                使用这两个可以更方便的查看自己文件夹的文件，界面体验更舒适等特点，这里我以使用pycharm为例:
+            </h4>
+            <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+                <img src="../教学/pycharm下载.png"  style="height: 70px;width: 100px;float: left;">
+                pycharm的下载网址是'https://www.jetbrains.com/pycharm<br>/download',pycharm下载选择community版就好了,下载完成后点新建项目就行了
+                就直接进入pycharm了。
+            </p>
+           </p>
+           <p class="pagenum">3</p>
+    </div>
+    <!--第4页了-->
+    <div class="wen4">
+            <h4 style="padding-top: 50px;padding-left: 40px;">pycharm的常用设置</h4>
+           <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            依次点击file-setting-plug-in，在搜索框里搜索chinese，选择那个图标是汉的，点击install，
+            然后重启pycharm，这时候pycharm就变成中文的了，继续设置：搜索字体，改变数值为18，然后外观，可以传入图片作为pycharm的背景图片
+            还有主题。然后查看python解释器的内容，看是不是自己的python运行环境的地址，如果是，那么这样，pycharm就配置好了。
+           </p>
+           <p class="pagenum">4</p>
+    </div>
+    <!--第5页了-->
+    <div class="wen5">
+            <h3 style="padding-top: 50px;padding-left: 40px;">第二章：书写第一个python文件</h3>
+           <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            打开pycharm，在左侧的目录右键-新建-python文件，命名文件名，这样就创建好了一个python文件，在右侧输入print('Hello World'),
+            右键-运行，可以看到在下面的控制台有输出的文字Hello World
+           </p>
+           <p class="pagenum">5</p>
+    </div>
+    <!--第6页了-->
+    <div class="wen6">
+            <h3 style="padding-top: 50px;padding-left: 40px;">第三章：python的基础知识</h3>
+           <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            我们在学习一门语言时，最重要的就是熟悉掌握该语言的变量，数据类型，以及输入输出函数，那么python也有它的数据类型：int整数，float浮点数，bool布尔值，
+            string字符串，此外还有其他的特殊数据类型：字典，列表，元组，集合，一共七种数据类型，那么我将从每个数据类型依次来说。
+           </p>
+           <h4 style="padding-left: 40px;">变量的定义</h4>
+           <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            什么是变量？如何定义？
+            变量就是可以一直变化的量，它可以先变成1然后变成2，可以一直变化下去。这就是变量。在python里变量的定义非常简单，只需要写：变量名＝xx，就相当于把xx赋值给变量名，这样定义好了一个变量。    
+            </p>
+            <h4 style="padding-left: 40px;">输出函数print()</h4>
+           <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            我们已经知道了如何定义变量，但我们只是给它定义了，那我们想知道这个变量是什么该怎么办，这个时候就需要使用我们的输出函数了，直接使用print(变量名)就可以直接在控制台里看到输出的结果了
+            </p>
+           <h4 style="padding-left: 40px;">1.int整数</h4>
+           <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            int整数，故名思意，就是指整数1，2，3，4，5这些，但是2.0虽然也是我们认为的一个整数，但它带有小数点，也是浮点数
+            </p>
+
+           <p class="pagenum">6</p>
+    </div>
+    <!--第7页了-->
+    <div class="wen7">
+        <h4 style="padding-top: 50px;padding-left: 40px;">2.float浮点数</h4>
+        <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            浮点数，本质就是小数，也就是带有小数点的数字都是浮点数，无论是3.3还是3.0都带有小数点，那就是浮点数。
+        </p>
+        <h4 style="padding-left: 40px;">3.bool布尔值</h4>
+        <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            布尔值实际上就只有两个TRUE和FALSE两个，是逻辑判断必要的类型。
+        </p>
+        <h4 style="padding-left: 40px;">4.string字符串</h4>
+        <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            字符串实际就是除数字之外的类型，例如'a'，'浮点数'，这些都有共同的特点，就是含有引号，所以呢，字符串就是含有引号(单引号双引号都一样，但必须的英文的)的类型，只要含有引号那就是字符串。
+        </p>
+        <h4 style="padding-left: 40px;">数据转换</h4>
+        <p style=" padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            说完了四种数据类型，大家就可以对python的基础数据类型有一定的了解了，那么我们会想到一个问题：数据类型怎么进行转换呢？那接下来我们就先举一个例子来看一下吧。我们先定义一个变量int1＝1然后我们输出一下这个int1，换行写print(int1)，就可以先在输出台得到这个内容，那么我们再另起一行写一个string1＝str(int1)然后再起一行写print(string1)就可以在输出台得到这个string1的内容了。上面的这些，就是一次数据转换。
+            除去布尔值，其他数据类型可以相互转换：
+        </p>
+        <p class="pagenum">7</p>
+    </div>
+   <!--第8页了-->
+    <div class="wen8">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px; text-indent: 2em;line-height: 25px;">
+            转成float使用float()
+            转成int使用int()
+            转成string使用str()
+            说完这些，大家可以回到pycharm一个一个的试试，输出看一下。(这个时候可能有人会说了：不是说有四种数据类型吗？怎么不见布尔值？这个布尔值比较特殊，我将放在判断的那章讲，这里只要知道布尔值只有正确和错误两个就好了)。
+        </p>
+        <p class="pagenum">8</p>
+    </div>
+    <!--第9页了-->
+    <div class="wen9">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第四章.python的书写标准：</h3>
+        <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            在上一章的学习中，我们可能会出现各种问题，这些问题大多可能都是python书写不标准导致的。那么这里我将先说好书写标准，会涉及到后面的，但这个很重要，到后面不明白了的话，可以回到这里再看看标准。<br>
+            1.写完一行就要换行。比如a＝1换行然后print(a)。<br>
+            2.标点符号都使用英文的，括号，引号等等，英文的常是没有空隙。<br>
+            3.缩进问题：现在我们还没有学到需要使用缩进，就在这里先提一下，后面使用了再说。<br>
+            4.我们可能会在其他的py文件里看到#和'''，这两个都是注释的意思，其中#是注释单行，''' '''三引号是注释选择的区域，注释是给自己或其他人方便看的备注，写好注释是很好的习惯。
+            5.我们在定义变量的时候，不要去刻意的定义名字为函数的，这样还让系统无法识别是变量还是函数，定义变量不能以数字开头。
+        </p>
+        <p class="pagenum">9</p>
+    </div>
+    <!--第10页了-->
+    <div class="wen10">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第五章：输入和输出</h3>
+        <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+            在前面的学习中我们已经可以写一段简单的代码，并且可以看到他的运行结果是什么，既然我们已经知道了使用print()可以输出，那我们就能够想到肯定还有一个输入函数，的确是有这样的函数input()
+        </p>
+        <h4 style="padding-left: 40px;">input函数实现输入</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+            当我们写出这个input()，控制台就知道这件事不简单，这意味着控制台不能够直接直接输出了，它就必须等待，等你输入一个xx然后回车，控制台就明白了，该我表演了。接下来数据就输出了。那么我们也知道input是一个输入函数，input()的使用不是随意的，我们一般常用的方法是吧input()赋值给一个变量。例如a＝input()，这个时候我们输出的a就默认是字符串类型的，那么我们知道了input的外面怎么使用，那在input()的小括号里面可以写什么，有什么用？
+            还真有用，当我们写下a＝input()，在控制台第一行会等待我们输入一个xx，但是这是空空如也，你不知道有什么提示，所以我们可以在括号里面写'请输入一个数字：'，这样人们就知道，哦这里要输入一个整数，
+            那我们会考虑到一个问题，我们是想让用户输入一个数字，但他非要输入一个3.44，那我们就没办法了吗，当然是有的，我们在之前学过了数据的变换，那我们把用户输入的变换成整数类型不就解决了嘛于是，这段代码就脱口而出：a＝int(input())然后print(a)这就可以限制用户的输入了，那么就还有float(input()),还有一个eval(input())，大家可以下去查一下这个eval()函数的用法，和int()或者是float有什么不同，有哪些好处。
+        </p>
+        <p class="pagenum">10</p>
+    </div>
+    <!--第11页了-->
+    <div class="wen11">
+        <h4 style="padding-top: 50px;padding-left: 40px;">输出函数print()的使用：</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">在介绍变量的时候我已经介绍过了print的使用了，那么这里为什么还要说这个print()呢？</p>
+        <p style="padding-left: 40px;padding-right: 15px;">print函数是python的输出函数，我们知道，a＝1 print(a)可以输出1,那么如果这样，a＝1，b＝2然后print(a,b)会输出什么呢，直接说吧会输出1 2，注意中间是有空格的，如果再定义一个c＝3再输出三个那就是1 2 3，这是python默认的输出方式，输出的不同内容之间由空格相隔，但假如我们不想由空格相隔，那该怎么操作呢，我们按住ctrl不放然后点击print就会进入到一个新的python文件里，这里有两个参数需要注意，这里的sep＝' '，end＝'\n'，sep呢是相隔的意思，默认的是sep是为空格，end是结束的意思，默认的这里是换行，我们可以修改这两个的值来实现想要的输出方式，在print(a,b,sep＝'！')我们可以使用逗号隔开，写下sep＝',',然后end＝''，这里的sep和end如果不写的话就是按默认的，这样的话就会以逗号间隔元素，到了下一行的print()也不会换行，而是空格。</p>
+        <h4 style="padding-left: 40px;"></h4>
+        <p class="pagenum">11</p>
+    </div>
+    <!--第12页了-->
+    <div class="wen12">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第六章：转义字符和运算字符</h3>
+        <h4 style="padding-top: 50px;padding-left: 40px;">转义字符的使用</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">在python里面很多符号都有它特定的功能，那我们不想使用这些功能，只想打出这个字符，该怎么办呢？没错，可以使用这个符号\，英文状态下，enter上面的那个，怎么样，是不是很熟悉，上一章节在说end就使用到了这个，话不多说<br>
+        1.\n表示换行<br>
+        2.\t表示空一格<br>
+        3.\'表示单引号<br>
+        反义字符的使用，是写在引号里面
+        </p>
+        <h4 style="padding-left: 40px;">运算符的使用</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        1.+ ：数字相加和连接作用('连接的必须是相同类型的')。<br>
+        2.- ：数字相减。<br>
+        3.* ：数字相乘和某字符倍数。<br>
+        4./ ：相除。<br>
+        5.// ：整除。<br>
+        6.% ：取余数。<br>
+        7.** ：幂运算。<br>
+        8. +=,-=类似的，是一种简写方式就是a+=1就是a=a+1的简写。<br>
+        9.> < == >= !=类似的，这些依次是大于，小于，等于(一个等号是赋值，两个等号是判断)，大于等于，不等于，这些的结果是布尔值就是正确错误<br>
+        10.and or not 逻辑运算，常用于if判断中。
+        </p>
+        <p class="pagenum">12</p>
+    </div>
+    <!--第13页了-->
+    <div class="wen13">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第七章：复杂数据类型和操作</h3>
+        <h4 style="padding-top: 50px;padding-left: 40px;">1.列表</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        列表是python常见的复杂数据类型，是一群简单数据在一起组成的一个表，它方便使用，可以用来辅助应用各种情况，那么首先来谈列表的创建：有两种方法创建<br>
+        1.使用[]中括号直接创建，我个人比较推荐这个，我们直接a=[]，就创建好了一个叫a的列表，此外，我们刚创建的是空的列表，也是可以填入内容的a=[1,5,9,0.5,'www']列表的内容没有要求，可以填各种类型的数据(浮点数记得加引号)，不同元素用逗号隔开，这样我们就创建了一个有内容的列表。<br>
+        2.使用函数list()创建,a=list(1),这个括号里只能填一个数据，还要调用函数，有点麻烦。不推荐。<br>
+        说完了创建，那列表不能只能定义一次就定下来了吧，那指定不能的，所以下面介绍几个操作列表内容的函数<br>
+        这里我先定义一个列表lst=[1,5,8,6]<br>
+        1.在最后追加:lst.append(x)<br>
+        2.在索引位置增加元素:lst.insert(index,x)<br>
+        3.清空列表所有元素:lst.clear()<br>
+        4.除去某一位置的元素:lst.pop(index)<br>
+        5.除去第一个出现的指定元素:lst.remove(x)<br>
+        6.反转列表顺序:lst.reserve()<br>
+        上面的操作我们可以直接lst.append(1)，就是直接对列表lst进行操作，我们也是可以lst2=lst.append(1),这样我们想一下，是不是lst没有变化，只是把变化后的赋值给了lst2了。
+        还有上面的那个索引index是什么呀？<br>
+
+
+        </p>
+        <p class="pagenum">13</p>  
+    </div>
+    <!--第14页了-->
+    <div class="wen14">
+        <h4 style="padding-top: 50px;padding-left: 40px;">什么是索引？</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">好的，我给大家举个例子吧，假如我们创建了一个列表a，我们怎么使用它呢，我们肯定是希望拿出列表的其中一个，那我们怎么取呢？没错，使用索引。
+        当我们创建好一个列表后，python会自动给我们的列表的每个元素设置一个编号，是从0开始的，就是说我们列表的第一个元素的编号是0，也就是索引是0，第二个是1，就是这样，我们就可以取到我们想要的数据了，
+        我们可以输出lst的第一个元素，索引是使用[]来索引，print(lst[0])这样就拿到了第一个元素，所以，上一页的索引就明白了，insert(1,'w')就是在列表的第二个位置插入'w'获取也就是lst[1]
+        ,索引也可以不止是在[]里面写一个数字，我们想取不止一个元素怎么索引，这时候就需要使用到[1:3],中间是冒号，这样就可以获取到2，3的元素，为什么不是234呢？因为取到的是不包括右边的数，这样的操作就是切。
+        此外，列表还是可以排序的，比如上一页的列表lst,我们想给它按升序排序，这时候我们就用到了sort()函数，我们可以这样lst.sort()，这样lst就按照升序排列了，那我们还可以使用sorted()，这个是把排好的列表赋值给其他变量名。
+        lst2=lst.sorted()这样lst没有变化，只是lst2是lst的升序，降序怎么排呢？我们只需要在sort()的括号里面写reserve=True，就可以了。
+
+        </p>
+        <h4 style="padding-left: 40px;">2.字典</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        在外面查字典的时候通常是怎么查到字的，我们是通过查找拼音表或者查找偏旁来找到这个字，那么字典也是这个原理，字典就是写对应关系键值对来实现，那么字典也是有两种方法创建。<br>
+        
+
+        </p>
+        <p class="pagenum">14</p> 
+    </div>
+    <!--第15页了-->
+    <div class="wen15">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        1.使用{}创建，里面写对应关系xx:xx,dic={a:1,b:2}(注意键是唯一的，以保证从字典获取是唯一的值)，这样就创建了一个字典。<br>
+        2.使用函数dict(a=1)就创建好了一个字典，不推荐使用。<br>
+        创建完了字典，那我们怎么去使用字典呢？
+        字典的作用那肯定就是为了用代号保存数据，字典也有和列表类似的用法。<br>
+        这里我还是先创建一个字典dict1={a:1,b:2}
+        1.获取字典的全部键名：dict.keys()<br>
+        2.获取字典的全部值：dict.values()<br>
+        3.删除字典的某一个元素：dict.pop(key)<br>
+        4.清空该字典：dict.clear()<br>
+        5.字典的索引：字典是没有索引的概念的，我们想要拿到某一个元素只需要输入key就可以获取到，有两种方法:第一种：dict[a],第二种dict.get(a),获取到的都是该键对应的值。<br>
+        我们说完了列表和字典的使用，这时候肯定会有同学问了，你不是在前面说了有4种复杂数据类型，这里怎么只介绍两个，这个的话，因为我们是快速学习嘛，而且剩下的元组和集合基本上不常使用，只有列表和字典使用的多，我们就只介绍这两个就足够了，另外两个可以下去了解。<br>
+        </p>
+        <h4 style="padding-left: 40px;">字符串的操作</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">说完了复杂数据类型，我们再回到简单的数据类型--字符串的操作。你肯定想说：字符串能有什么操作？我只能说有的，还很多。<br>
+        我先创建一个字符串str1='Hello World'<br>
+
+        </p>
+        <p class="pagenum">15</p> 
+    </div>
+    <!--第16页了-->
+    <div class="wen16">
+        <h4 style="padding-top: 50px;padding-left: 40px;">1.字符串的索引</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        和列表一样，字符串也有索引，比如上页的例子str1[0]，就是取第一个数，切片也和列表操作一样，另外索引可以为负，为负数的意思是倒着查，倒着查的第一个是-1，
+        切片的操作还有这样a[:5]，如果在冒号左右没有写得话，就会按照默认的0和结尾来取，索引使用正数负数同时使用会更方便。
+        <h4 style="padding-left: 40px;">2.字符串的操作</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        我们设置两个字符串str1='aaa',str2='bbb'<br>
+        我们想把两个字符串连接，使用print(str1+str2)就输出两个字符串相连的结果了，在前面也说到了+号有连接的作用。<br>
+        还有print(str1*2)就是输出两遍str1，*号就是倍数，最后还有print('a' in str1)就是判断a这个字符串是否在str1里面，如果在就输出True，反之False。<br>
+        此外还有许多字符串的处理方法如str.lower()将str全部字母改成小写，剩下的方法我的建议是用的时候再查，没有必要全部记住。
+        </p>
+
+        </p>
+        <p class="pagenum">16</p> 
+    </div>
+    <!--第17页了-->
+    <div class="wen17">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第八章：程序的流程控制</h3>
+        <h4 style="padding-top: 50px;padding-left: 40px;">1.if判断语句</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        我们在前面的几个章节里学习了各种各样的数据类型，也学习了他们的增删改等操作，但一个程序不能只有这些数据吧，因此在我们的python里，流程控制是我们写一个文件的核心，那么流程控制是什么呢？我们在上高中的时候学过一个流程的图：比如输入几，判断如果怎么样就执行什么，最后输出，我们的python的流程控制就是这样。<br>
+        流程控制有几种方式：<br>
+        1.if判断，语法是if xx:换行，(这个的标准我们可以参照第四章的python的参照标准来书写)，python对格式的要求比较严格，不过我认为这个我们也是能够理解的，比如我这样一个例子:<br>
+        a = 1<br>
+        if a==1:(这里的两个等号在之前说过，最后一定要写冒号)然后换行<br>
+        &nbsp;print(a)<br>
+        这样一个简单的控制流程就写完了，我们可以预测一下这个的结果是什么a是1，判断a是等于1，于是就是True，就执行下面的，上面的print(a)的前面是有四个空格的，也就是一个tab的距离，这是python的规定，那么我们想一下，如果我们不写这个空格会怎么样？可以想到，print(a)就是顶头写了，那他就是可以直接输出了，而我们写下空格以后就表示这个print(a)是if的结论，就是只有if成真他才会实现，就是给python一个辨别
+
+        </p>
+        <p class="pagenum">17</p> 
+    </div>
+    <!--第18页了-->
+    <div class="wen18">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        的方法，他是直接输出还是满足条件后输出。
+        这里的if a==1:我们知道是真的，所以这个a==1的结果是布尔值True，然后if判断是True还是False，判断是否运行下面的代码，
+        于是我们也可以这样写if True:xxx,这样写就是会直接执行xxx的。<br>
+        if 我们已经了解了它的基本使用，那么它就指定不能判断一个，这个就要用到我们的and or not 顾名思义，我们可以直接把这写在冒号前。<br>
+        a=1<br>
+        b=2<br>
+        if a==1 and b==2:xxx<br>
+        这是三个关键词的用法，and是指and前后的都必须满足，or是指前后满足一个就够了，not是取反。<br>    
+        </p>
+        <h4 style="padding-left: 40px;">多重判断</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        在上面我们说了一个判断，那我们写两个判断也是可以的:<br>
+        a=1
+        b=3
+        if a>b:
+        &nbsp;&nbsp;&nbsp;&nbsp;print('a比b大')
+        if a'<'b: 
+        &nbsp;&nbsp;&nbsp;&nbsp;print('a比b小')
+        这样我们就写了多个流程控制，python会按照顺序一个一个的判断，if的最后我们介绍这个esle:这个else:比较特殊，不需要写条件，直接换行，表示其他，可以用这个大幅度节省代码量。
+        </p>
+        <h4 style="padding-left: 40px;">2.for循环语句</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">在if里面我们明白了流程的基本原理就是一个一个判断，那么如果一个变量需要多次进行判断该怎么操作呢？使用for循环或者while循环，for循环是有次数的循环，就是我们可以直接定义它的循环次数，while是无限循环。
+        </p>
+        <p class="pagenum">18</p> 
+    </div>
+    <!--第19页了-->
+    <div class="wen19">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        for循环创建的语法是for i in xx:xx 就是for空格变量(这个变量是在这里新定义的，不用在for循环之前就定义，后面这个i也是可以使用的)空格in空格范围(会说到一个新的range()函数)冒号，回车。
+        </p>
+        <h4 style="padding-left: 40px;">range()函数的使用</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        我们如果想要直接得到1段1到10的序列，我们会采取创建列表[1,2,3,...]但这样会不会太麻烦了，全部写出来吗？因此我们会使用这个range()函数来得到一段序列,如使用range(1,11)，就得到了1到10，这里也是右不包括，逗号左右是左到右，也是可以省略，默认是0和最后range(10)表示0到9。
+        </p>
+        <h4 style="padding-left: 40px;">for循环的原理</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        for i in range(10):xx，这就是一个标准的for循环，它是一个10次的循环，它的原理是i取range(10)的索引，依次往下取，直到取完为止，就是i第一次循环是0，第二次1，最后一次是10，取完后面的整个循环就结束了。
+        这里的i不是固定的，也可以使用其他名字，in后面的是一段范围。当然for循环我们也可以看出来，in后面也是可以跟上列表的，就是i依次取到列表的值依次往后取，就可以依次取到列表的所有元素。<br>
+            for循环也是可以嵌套的，举个例子for i in range(10): tab for s in range(5): tab print(s)这样就是另一个for循环放在第一个for循环里面，这个运行逻辑是i=0,然后s=0，s=1,s=2,s=3,s=4,里面的for结束，然后i=1...
+        </p>
+        <h4 style="padding-left: 40px;">while循环</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        while循环的书写规范是while 判断的语句:换行，就是这样，例如'a=1 while a<5: tab print(a) tab a+=1
+        </p>
+        <p class="pagenum">19</p> 
+    </div>
+    <!--第20页了-->
+    <div class="wen19">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        while循环需要在之前提前设置变量，这里为什么要写a+=1呢？我们可以想一下它的原理，a=1，明显是小于5的,就会进入循环第一次a=1,然后输出a，然后a+1就是2，然后a是3最后a是5的时候就不会进入循环，那很明显，如果a不变化，那就会一直进入循环，就是所谓的死循环，所以我们写while循环一定要注意不要写出死循环，要对判断的变量在循环内进行变化<br>
+        那有时候我们就是需要写一个一直循环下去的while，我们就可以像if一样while True:就是会一直循环下去
+        </p>
+        <h4 style="padding-left: 40px;">循环的关键字</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        我们在使用两种循环的时候，难道只能等待着循环结束吗？因此我们将学习两个关键字还有一个很有趣的关键字<br>
+        1.break：直接跳出整个循环，通常在循环的if语句里面使用。<br>
+        2.continue：跳出当前循环，整个循环会继续进行。<br>
+        3.pass：如果我们在写好了部分代码后，比如写好一个循环while True:后面我们可以先写一个pass，就可以先放在这里，pass是一种方便的方法，可以用来检验用。
+        </p>
+        <p class="pagenum">20</p> 
+    </div>
+    <!--第21页了-->
+    <div class="wen21">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第九章：常用的函数和函数创建</h3>
+        <h4 style="padding-top: 50px;padding-left: 40px;">常用的函数</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        1.type(x)，获取x的类型(int或者是float等等)<br>
+        2.try:xx except: x，这个是一种特定的结构函数，是测试的意思，try后面跟需要尝试的语句，如果失败就会运行expect的语句，常用于书写爬虫。<br>
+        3.格式化数据：f'xx'和format()函数，我们会有一个疑问，什么是格式化？为什么要学格式化？(没错，我们学任何的函数之前都要明白，为什么要学这个，学这个我大概可以用到什么地方？)，接下来，我将举一个例子说一下什么是格式化<br>
+        a='mike'<br>
+        b=18<br>
+        print('我叫'+a+'我今年'+b+'岁')，可以复制下来，到pycharm上试试看，我们会发现直接报错，原因是什么呢？我直接说吧，是因为我们知道+号是可以连接的，但+只能连接两个字符串，而b是2，是一个数字，于是就报错了，那这时候有同学会说了，不就是因为b是整数类型嘛，我把b改成字符串不就好了吗？可以是可以，但是如果b是可以变的，需要+1的，那怎么弄？所以，我们既然可以在输出上下手脚，干嘛还要折腾输入上呢？
+        因此学习格式化输出还是很关键的，除此之外，格式化还有保留几位小数和保留空格等的作用，那我们就直接进入格式化的学习吧。<br>
+
+        </p>
+        <p class="pagenum">21</p> 
+    </div>
+    <!--第22页了-->
+    <div class="wen22">
+        <h4 style="padding-top: 50px;padding-left: 40px;">格式化第一种f''</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        f''是简单的格式化方式，它的书写方式是f'{a}'其中大括号里面是变量名称，在大括号外可以写别的内容例如a=1 print(f'我的年龄是{a}岁')，就是很方便，只要保证变量在大括号里面就行。<br>
+        
+        </p>
+        <h4 style="padding-left: 40px;">格式化第二种format()函数</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        format就相对复杂了一点，语法是'{}'.format(变量)，举例a=1 print('我的age是{}'.format(a))，这里前面的括号是按照顺序来的，按照format()括号内的变量依次对应的，我们也是可以不按照顺序的，只需要在{}里面写1，2就对应上。
+
+        </p>
+        <h4 style="padding-left: 40px;">两种方式的保留小数方法和保留其他符号的方法</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        先上例子print(f'{a:.2f}')和print('{:.2f}'.format(a))都是保留两位小数，这里的冒号是格式化的固定用法，点是表示对小数点操作，2f就是保留两位小数，类似的都可以这样写。
+        还有print('{a:->5}'.format(a))是向右对齐，共五位，a不够五位就用-填充，具体的format()用法还有很多，可以下去专门去查。
+        </p>
+        <h4 style="padding-left: 40px;">函数的创建</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        在上面我们看到了几个函数，虽然不多，但我们可以看到，我们想使用函数，就必须写出函数的名，再写出函数的参数，就可以调用这个函数了，那么我们也是可以自己创建函数的<br>
+        函数的创建 def 函数名():回车，我们使用的时候就只要写出函数名()就可以调用了。例子：def fun(): tab print('这是一个函数') 然后我们只需要fun()就可以实现print('这是一个函数')的作用了。<br>
+        </p>
+        <p class="pagenum">22</p> 
+    </div>
+    <!--第23页了-->
+    <div class="wen23">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        def 函数名():这个括号是干什么用的呢？是传入参数的我们总是不能一直调用一模一样的函数吧，我们这里直接上例子：def fun(x): tab print(x)然后我们调用的时候传入一个参数就是fun(1)，输出的结果就是1，此外我们还可以直接fun(x=1)，这样是设置x的默认值是1，我们调用的时候就可以直接fun()里面不写，就会按照默认，当然也是可以fun(2)就会改变。fun()里面可以不只是传入一个参数，也是可以多个，但是需要注意，如果创建函数的时候传入了参数，调用的时候必须传入等量的参数，不然会报错(有默认值另说)
+
+        </p>
+        <h4 style="padding-left: 40px;">函数的返回值</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        函数的返回值默认是空(如果有输出函数就不是了)，我们可以使用retrun来实现设置返回值，例如def fun(x=1): tab retrun x 然后调用print(fun())我们就拿到了1。
+        </p>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        
+        函数的使用很关键，使用函数可以让代码更容易看懂。因此要多写一点函数，自己尝试一下。
+        </p>
+        <p class="pagenum">23</p> 
+    </div>
+    <!--第24页了-->
+    <div class="wen24">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第十章：对文件的操作</h3>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        直接上函数：with open('文件名','r或者w或者rb或者wb',encoding='utf-8')as file: tab file.write('内容')或者file.read()<br>
+        是不是看懵了，没事，听我慢慢给你分析：with open()as 一个名字:是固定的打开方式我们需要填的是open()括号里面的和as后面的是一个名字用来接收打开的文件。好了，明白了函数构造我们来说说open()里面的三个参数
+        第一个是打开的文件(文件名用引号引起来)，没有这个文件也没有关系，第二个是打开的方式，下面会详细介绍，第三个是编码方式，通常用的有两种utf-8和gbk，第一个是国际编码，第二个是中国编码，这两个的区别就不说了。<br>
+            1.'r'是以只读方式打开，如果文件不存在就报错。<br>
+            2.'rb'是打开二进制文件，如图片。<br>
+            3.'w'覆盖写模式，文件不存在就会新建一个，文件存在则覆盖写内容。<br>
+            4.'wb'覆盖写模式写二进制文件，文件不存在就会新建一个，文件存在则覆盖写内容。<br>
+            5.'a'追加写模式，文件不存在就会新建一个，文件存在则覆盖写内容<br>
+            6.+,不同模式一起。<br>
+        这样我们就知道了，怎么打开文件查看文件，写内容。那么file.write()很明显就是写，但这里注意如果使用r或者rb方式打开就是只读方式，就不能对打开的文件进行修改了。
+        还有file.read()通常是这样用a=file.read()，将file的内容赋值给a。
+        </p>
+        <p class="pagenum">24</p> 
+    </div>
+    <!--第25页了-->
+    <div class="wen25">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第十一章：类的创建</h3>
+        <h4 style="padding-left: 40px;">什么是类，为什么要创建类？</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        在前面的十章里，我们学习了各种各样的操作，有让代码量建少的函数，还有其他的操作，那我们就直接来看看一个写好的文件的
+        </p>
+        <img src="../教学/class.png" style="height: 250px;width: 450px;padding-left: 40px;">
+        <p style="padding-left: 40px;padding-right: 15px;">
+        我们可以看到最上面的class()，这个是什么，这么说，我们在屏幕上创建一个小人，那么我们小人的位置是在哪呢？我们看上面的def __init__(self):这是固定用法，表示定义初始化方法
+        也就是我们的小人的初始的样子，位置，这个明白了，我们看后面还有def，我们想要对这个小人进行操作，操作的全部内容都写在这个class里面，也就是这个class实际就是表示某一部分的全部操作，把他们放在一起，包括初始化和运动方式等，(初始化的写法是固定的，每个class都需要写初始化)。
+        </p>
+        <p class="pagenum">25</p>
+    </div>
+    <!--第26页了-->
+    <div class="wen26">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        我们希望让这个小人向下走1，同时向右走2，我们的函数就需要调用两次，而且不能够同步，使用类就可以实现，类里面是一个部分的全部操作，比如是操作人，好init是设置人的初始位置，下面写人的变化函数，然后在其他需要用的地方在实现，比如下面还有一个类是点击，那我们就可以把人的移动函数写在点击里面，就可以实现点击人移动了，这就是class。<br>
+        那么上面的self是什么，这个self实际就是表示是在class里面的意思，每个class都有它的self，self后面的是这个class的属性，我们可以仿照图片里的写，在init的函数里面和def的括号里面都写self。这样我们的部分就写好了，其他的class或者是函数在调用的时候可以使用类名.属性获取到。在函数外的调用是和函数一样。
+
+        </p>
+        <img src="../教学/main.png" style="height: 180px;width: 450px;padding-left: 40px;">
+        <p style="padding-left: 40px;padding-right: 15px;">
+        部分写完了，总有有一个主体来运行这些吧，所以上面图片的if __name__ == '__main__':就是主程序的意思，程序只运行这里，我们可以把上面总结后相互串联后的函数或者类写在这里。
+
+        </p>
+        <p class="pagenum">26</p>
+    </div>
+    <!--第27页了-->
+    <div class="wen27">
+        <h3 style="padding-top: 50px;padding-left: 40px;">第十二章：库的了解</h3>
+        <h4 style="padding-left: 40px;">什么是库？</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        这么说，我们都知道mc我的世界这款游戏吧，python的库我们可以理解成我的世界的mod，资源包。库是已经写好的，我们只需要引入库就可以使用库的函数了，上一章，有些函数看不懂没关系，因为那是库的函数，每个库的函数名不同，作用不同，需要传入的参数也不同。
+        可以这么说，python的强大之处就是在于它有非常多的库。那么好，这么引入库。<br>
+        </p>
+        <h4 style="padding-left: 40px;">库的引入方法</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        
+        1.第一张引入方法 import 库名 或者是import 库名 as 别名 就是可能库名太长了，我们给起一个别名，使用的使用是 库名或别名.函数名<br>
+        2.第二种引入方法 from 库名 import *或者某一个部分，这样引入可以直接调用库的函数，不用写库名。<br>
+        3.我们其实还可以使用上面的两种方法来引入我们自己python文件的某一个变量或者函数。写法是一样的。<br>
+        库分为两种一种是python的内部库就是自带的，无需下载，另一种是外部库，需要下载。那么我将介绍两个常用的内部库和下载外部库的方法，如果想要学习外部库的使用，可以下去搜索csdn是有详细的教学。
+
+        </p>
+        <h4 style="padding-left: 40px;">内部库的介绍</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        1.random随机库的使用，首先我们引入random：import random然后使用它的函数1.seed(x)是设置种子，就像我的世界的种子一样，设置这个我们下面的随机数就是固定的。2.random()产生0到1不包含1的小数。3.randint(a,b)产生一个a到b的都包含的整数。4.uniform(a,b)产生一个a到b都包含的小数。此外，还有随机打乱序列，随机从序列选择的函数，用的不多，需要用可以下去查。<br>
+        </p>
+        <p class="pagenum">27</p>
+    </div>
+    <!--第28页了-->
+    <div class="wen28">
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        2.time时间库的使用：首先我们引入time：import time然后使用它的函数1.time()获取获取当前时间戳，(时间戳是从1970年1月1日0点到当前时间的秒值)。2.localtime()是获取当前时间的年月日时分秒等(不传参数表示当前，传参数表示1970年过了多少秒)3.获取当前时间的格式化直接就是这个：time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+        </p>
+        <h4 style="padding-left: 40px;">外部库的下载</h4>
+        <p style="padding-left: 40px;padding-right: 15px;">
+        通常有两种方法：1.按着win+r，打开运行框，输入cmd，然后输入pip install 库名，就开始下载了。<br>
+        2.在pycharm里面下载设置-项目-python解释器-左上角的加号进入下载，(在解释器里面也可以看下载了那些库)。
+        </p>
+        <p style="padding-top: 50px;padding-left: 40px;padding-right: 15px;">
+        写到这里，本文就写完了，希望大家能够支持。
+        </p>
+        <p class="pagenum">28</p>
+    </div>
+</div>
+   
+   
+   <div class="shang"></div>
+   <div class="xia"></div>
+
+   <script>
+        var shu = document.querySelector('.shu')
+        var feng = document.querySelector('.feng')
+        var wen1 = document.querySelector('.wen1')
+        var wen2 = document.querySelector('.wen2')
+        var wen3 = document.querySelector('.wen3')
+        var wen4 = document.querySelector('.wen4')
+        var wen5 = document.querySelector('.wen5')
+        var wen6 = document.querySelector('.wen6')
+        var wen7 = document.querySelector('.wen7')
+        var wen8 = document.querySelector('.wen8')
+        var wen9 = document.querySelector('.wen9')
+        var wen10 = document.querySelector('.wen10')
+        var wen11 = document.querySelector('.wen11')
+        var wen12 = document.querySelector('.wen12')
+        var wen13 = document.querySelector('.wen13')
+        var wen14 = document.querySelector('.wen14')
+        var wen15 = document.querySelector('.wen15')
+        var wen16 = document.querySelector('.wen16')
+        var wen17 = document.querySelector('.wen17')
+        var wen18 = document.querySelector('.wen18')
+        var wen19 = document.querySelector('.wen19')
+        var wen20 = document.querySelector('.wen20')
+        var wen21 = document.querySelector('.wen21')
+        var wen22 = document.querySelector('.wen22')
+        var wen23 = document.querySelector('.wen23')
+        var wen24 = document.querySelector('.wen24')
+        var wen25 = document.querySelector('.wen25')
+        var wen26 = document.querySelector('.wen26')
+        var wen27 = document.querySelector('.wen27')
+        var wen28 = document.querySelector('.wen28')
+        var shang = document.querySelector('.shang')
+        var xia = document.querySelector('.xia')
+        var page = 0 
+        
+        xia.onclick =function(){
+            page+=1
+            if (page == 1 ){
+        feng.setAttribute('style','transform: rotateY(-180deg)')
+        wen1.setAttribute('style','transform: rotateY(0)')
+        wen2.setAttribute('style','transform: rotateY(0)')
+        wen3.setAttribute('style','transform: rotateY(0)')
+        wen4.setAttribute('style','transform: rotateY(0)')
+        wen5.setAttribute('style','transform: rotateY(0)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        }
+            if(page==2){
+        //feng.setAttribute('style','transform: rotateY(-180deg)')
+        
+        wen1.setAttribute('style','transform: rotateY(-180deg)')
+        wen2.setAttribute('style','transform: rotateY(0)')
+        wen3.setAttribute('style','transform: rotateY(0)')
+        wen4.setAttribute('style','transform: rotateY(0)')
+        wen5.setAttribute('style','transform: rotateY(0)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==3){
+        wen2.setAttribute('style','transform: rotateY(-180deg)')
+        wen3.setAttribute('style','transform: rotateY(0)')
+        wen4.setAttribute('style','transform: rotateY(0)')
+        wen5.setAttribute('style','transform: rotateY(0)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==4){
+        wen3.setAttribute('style','transform: rotateY(-180deg)')
+        wen4.setAttribute('style','transform: rotateY(0)')
+        wen5.setAttribute('style','transform: rotateY(0)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==5){
+        wen4.setAttribute('style','transform: rotateY(-180deg)')
+        wen5.setAttribute('style','transform: rotateY(0)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==6){
+        wen5.setAttribute('style','transform: rotateY(-180deg)')
+        wen6.setAttribute('style','transform: rotateY(0)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==7){
+        wen6.setAttribute('style','transform: rotateY(-180deg)')
+        wen7.setAttribute('style','transform: rotateY(0)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==8){
+        wen7.setAttribute('style','transform: rotateY(-180deg)')
+        wen8.setAttribute('style','transform: rotateY(0)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')
+        wen12.setAttribute('style','transform: rotateY(0)')
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==9){
+        wen8.setAttribute('style','transform: rotateY(-180deg)')
+        wen9.setAttribute('style','transform: rotateY(0)')
+        wen10.setAttribute('style','transform: rotateY(0)')
+        wen11.setAttribute('style','transform: rotateY(0)')    
+        wen12.setAttribute('style','transform: rotateY(0)')    
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==10){
+        wen9.setAttribute('style','transform: rotateY(-180deg)')
+        wen10.setAttribute('style','transform: rotateY(0)')   
+        wen11.setAttribute('style','transform: rotateY(0)') 
+        wen12.setAttribute('style','transform: rotateY(0)')     
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==11){
+        wen10.setAttribute('style','transform: rotateY(-180deg)')   
+        wen11.setAttribute('style','transform: rotateY(0)')    
+        wen12.setAttribute('style','transform: rotateY(0)')      
+        wen13.setAttribute('style','transform: rotateY(0)') 
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==12){
+        wen11.setAttribute('style','transform: rotateY(-180deg)')    
+        wen12.setAttribute('style','transform: rotateY(0)')     
+        wen13.setAttribute('style','transform: rotateY(0)')
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==13){
+        wen12.setAttribute('style','transform: rotateY(-180deg)')     
+        wen13.setAttribute('style','transform: rotateY(0)')       
+        wen14.setAttribute('style','transform: rotateY(0)')
+        wen15.setAttribute('style','transform: rotateY(0)')
+        wen16.setAttribute('style','transform: rotateY(0)')
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+        }
+            if (page==14){
+        wen13.setAttribute('style','transform: rotateY(-180deg)')       
+        wen14.setAttribute('style','transform: rotateY(0)')  
+        wen15.setAttribute('style','transform: rotateY(0)')    
+        wen16.setAttribute('style','transform: rotateY(0)')  
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==15){
+        wen14.setAttribute('style','transform: rotateY(-180deg)')  
+        wen15.setAttribute('style','transform: rotateY(0)')   
+        wen16.setAttribute('style','transform: rotateY(0)')     
+        wen17.setAttribute('style','transform: rotateY(0)')
+        wen18.setAttribute('style','transform: rotateY(0)')
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==16){
+        wen15.setAttribute('style','transform: rotateY(-180deg)')   
+        wen16.setAttribute('style','transform: rotateY(0)')    
+        wen17.setAttribute('style','transform: rotateY(0)')  
+        wen18.setAttribute('style','transform: rotateY(0)')   
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==17){
+        wen16.setAttribute('style','transform: rotateY(-180deg)')    
+        wen17.setAttribute('style','transform: rotateY(0)')    
+        wen18.setAttribute('style','transform: rotateY(0)')     
+        wen19.setAttribute('style','transform: rotateY(0)')
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==18){
+        wen17.setAttribute('style','transform: rotateY(-180deg)')    
+        wen18.setAttribute('style','transform: rotateY(0)')     
+        wen19.setAttribute('style','transform: rotateY(0)')   
+        wen20.setAttribute('style','transform: rotateY(0)')
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==19){
+        wen18.setAttribute('style','transform: rotateY(-180deg)')     
+        wen19.setAttribute('style','transform: rotateY(0)')    
+        wen20.setAttribute('style','transform: rotateY(0)')    
+        wen21.setAttribute('style','transform: rotateY(0)')
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==20){
+        wen19.setAttribute('style','transform: rotateY(-180deg)')    
+        wen20.setAttribute('style','transform: rotateY(0)')   
+        wen21.setAttribute('style','transform: rotateY(0)')     
+        wen22.setAttribute('style','transform: rotateY(0)')
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==21){
+        wen20.setAttribute('style','transform: rotateY(-180deg)')   
+        wen21.setAttribute('style','transform: rotateY(0)')     
+        wen22.setAttribute('style','transform: rotateY(0)')     
+        wen23.setAttribute('style','transform: rotateY(0)')
+        wen24.setAttribute('style','transform: rotateY(0)')
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==22){
+        wen21.setAttribute('style','transform: rotateY(-180deg)')     
+        wen22.setAttribute('style','transform: rotateY(0)')   
+        wen23.setAttribute('style','transform: rotateY(0)')   
+        wen24.setAttribute('style','transform: rotateY(0)')  
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==23){
+        wen22.setAttribute('style','transform: rotateY(-180deg)')   
+        wen23.setAttribute('style','transform: rotateY(0)')    
+        wen24.setAttribute('style','transform: rotateY(0)')    
+        wen25.setAttribute('style','transform: rotateY(0)')
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==24){
+        wen23.setAttribute('style','transform: rotateY(-180deg)')    
+        wen24.setAttribute('style','transform: rotateY(0)')     
+        wen25.setAttribute('style','transform: rotateY(0)')   
+        wen26.setAttribute('style','transform: rotateY(0)')
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if(page==25){
+        wen24.setAttribute('style','transform: rotateY(-180deg)')     
+        wen25.setAttribute('style','transform: rotateY(0)')     
+        wen26.setAttribute('style','transform: rotateY(0)')    
+        wen27.setAttribute('style','transform: rotateY(0)')
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==26){
+        wen25.setAttribute('style','transform: rotateY(-180deg)')     
+        wen26.setAttribute('style','transform: rotateY(0)')     
+        wen27.setAttribute('style','transform: rotateY(0)')   
+        wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==27){
+        wen26.setAttribute('style','transform: rotateY(-180deg)')     
+        wen27.setAttribute('style','transform: rotateY(0)')     
+        wen28.setAttribute('style','transform: rotateY(0)')    
+            }
+            if (page==28){
+        wen27.setAttribute('style','transform: rotateY(-180deg)')     
+        wen28.setAttribute('style','transform: rotateY(0)')       
+            }
+        }
+        
+        shang.onclick = function(){
+            page-=1
+            if (page<=0){
+                page=0
+            }
+            if(page == 0){
+                feng.setAttribute('style','transform: rotateY(0)')
+                wen1.setAttribute('style','transform: rotateY(0)')
+                wen2.setAttribute('style','transform: rotateY(0)')
+                wen3.setAttribute('style','transform: rotateY(0)')
+                wen4.setAttribute('style','transform: rotateY(0)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')  
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==1){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(0)')
+                wen2.setAttribute('style','transform: rotateY(0)')
+                wen3.setAttribute('style','transform: rotateY(0)')
+                wen4.setAttribute('style','transform: rotateY(0)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+            }
+            if (page==2){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(0)')
+                wen3.setAttribute('style','transform: rotateY(0)')
+                wen4.setAttribute('style','transform: rotateY(0)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==3){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(0)')
+                wen4.setAttribute('style','transform: rotateY(0)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==4){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(0)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==5){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(0)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==6){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(0)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==7){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(0)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==8){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(0)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==9){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(0)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==10){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(0)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==11){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(0)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==12){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(0)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==13){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(0)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==14){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(0)') 
+                wen15.setAttribute('style','transform: rotateY(0)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==16){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(0)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==17){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(0)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==18){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(0)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==19){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(0)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==20){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(0)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==21){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(0)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==22){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(0)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==23){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(-180deg)')
+                wen23.setAttribute('style','transform: rotateY(0)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==24){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(-180deg)')
+                wen23.setAttribute('style','transform: rotateY(-180deg)')
+                wen24.setAttribute('style','transform: rotateY(0)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==25){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(-180deg)')
+                wen23.setAttribute('style','transform: rotateY(-180deg)')
+                wen24.setAttribute('style','transform: rotateY(-180deg)')
+                wen25.setAttribute('style','transform: rotateY(0)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==26){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(-180deg)')
+                wen23.setAttribute('style','transform: rotateY(-180deg)')
+                wen24.setAttribute('style','transform: rotateY(-180deg)')
+                wen25.setAttribute('style','transform: rotateY(-180deg)')
+                wen26.setAttribute('style','transform: rotateY(0)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+            if (page==27){
+                feng.setAttribute('style','transform: rotateY(-180deg)')
+                wen1.setAttribute('style','transform: rotateY(-180deg)')
+                wen2.setAttribute('style','transform: rotateY(-180deg)')
+                wen3.setAttribute('style','transform: rotateY(-180deg)')
+                wen4.setAttribute('style','transform: rotateY(-180deg)')
+                wen5.setAttribute('style','transform: rotateY(-180deg)')
+                wen6.setAttribute('style','transform: rotateY(-180deg)')
+                wen7.setAttribute('style','transform: rotateY(-180deg)')
+                wen8.setAttribute('style','transform: rotateY(-180deg)')
+                wen9.setAttribute('style','transform: rotateY(-180deg)')
+                wen10.setAttribute('style','transform: rotateY(-180deg)')  
+                wen11.setAttribute('style','transform: rotateY(-180deg)')
+                wen12.setAttribute('style','transform: rotateY(-180deg)')
+                wen13.setAttribute('style','transform: rotateY(-180deg)') 
+                wen14.setAttribute('style','transform: rotateY(-180deg)') 
+                wen15.setAttribute('style','transform: rotateY(-180deg)') 
+                wen16.setAttribute('style','transform: rotateY(-180deg)') 
+                wen17.setAttribute('style','transform: rotateY(-180deg)')
+                wen18.setAttribute('style','transform: rotateY(-180deg)')
+                wen19.setAttribute('style','transform: rotateY(-180deg)')
+                wen20.setAttribute('style','transform: rotateY(-180deg)')
+                wen21.setAttribute('style','transform: rotateY(-180deg)')
+                wen22.setAttribute('style','transform: rotateY(-180deg)')
+                wen23.setAttribute('style','transform: rotateY(-180deg)')
+                wen24.setAttribute('style','transform: rotateY(-180deg)')
+                wen25.setAttribute('style','transform: rotateY(-180deg)')
+                wen26.setAttribute('style','transform: rotateY(-180deg)')
+                wen27.setAttribute('style','transform: rotateY(0)')
+                wen28.setAttribute('style','transform: rotateY(0)')
+                // feng.setAttribute('style','z-index:-99')
+            }
+        // feng.setAttribute('style','transform-origin: right')
+        // feng.setAttribute('style','transform: rotateY(0)')
+        // wen1.setAttribute('style','transform: rotateY(0)')
+        // wen2.setAttribute('style','transform: rotateY(0)')
+        // wen3.setAttribute('style','transform: rotateY(0)')
+        // wen4.setAttribute('style','transform: rotateY(0)')
+        // wen5.setAttribute('style','transform: rotateY(0)')
+         console.log(5555)
+         console.log(page)
+        }
+        console.log(page)
+    </script>
+</body>
+</html>
